@@ -1,0 +1,28 @@
+Кнопка вход
+//div[@class='auth-bar__item auth-bar__item--text'] 
+//div[text() ='Вход ']
+
+
+Текстбоксы для входа
+логин и пароль
+//input[@class='auth-box__input']
+input.auth-box__input   
+
+логин
+//input[@data-field='login']
+input[data-field=login]
+
+пароль
+//input[@type='password']
+input[type=password]
+
+список найденых товаров
+//div[@class='product__offers__wrapper']
+div.product__offers__wrapper
+
+ссылка на выбранный товар 
+//a[@class='product__title-link']
+a.product__title-link
+
+тайтл
+//h1[@class='catalog-masthead__title']/text()
