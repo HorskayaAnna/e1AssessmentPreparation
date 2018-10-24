@@ -10,7 +10,11 @@ namespace Onliner.Test.Automation.Framework.Web.Tests
         public void Search()
         {
             Header header = new Header();
-            header.SendText();
+            header.SendText("iphone");
+            header.ChoseElement("Смартфон Apple iPhone SE 32GB Space Gray");
+            string expected = "Смартфон Apple iPhone SE 32GB Space Gray";
+            string actual = header.GetTitle();
+            Assert.AreEqual(actual, expected);
         }
     }
 }

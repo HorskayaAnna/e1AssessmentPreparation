@@ -1,8 +1,6 @@
 ﻿using Onliner.Test.Automation.Framework.Web.Objects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.ObjectModel;
 using System.Drawing;
 
 
@@ -24,6 +22,7 @@ namespace Onliner.Test.Automation.Framework.Web.Controls
                 Element = value;
             }
         }
+
         public string TagName => Element.TagName;
         public string Text => Element.Text;
         public bool Selected => Element.Selected;
@@ -71,16 +70,6 @@ namespace Onliner.Test.Automation.Framework.Web.Controls
         {
             this.Locator = locator;
             this.Name = name;
-        }
-
-        public IWebElement FindElement(By locator)
-        {
-            return Element.FindElement(locator);
-        }
-
-        public ReadOnlyCollection<IWebElement> FindElements(By locator)
-        {
-            return Element.FindElements(locator);
         }
 
         public void Click()

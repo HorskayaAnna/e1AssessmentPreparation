@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6591EA89-5658-4BB2-9D30-F2ABAC82E672}</ProjectGuid>
+    <ProjectGuid>{E3039C0B-86AE-4BCA-9F4E-0C3FE61234CC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Onliner</RootNamespace>
@@ -49,14 +49,13 @@
     <Reference Include="WebDriver, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.3.14.0\lib\net45\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.Support.3.14.0\lib\net45\WebDriver.Support.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\BaseElement.cs" />
     <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\ElementList.cs" />
     <Compile Include="Controls\TextBox.cs" />
+    <Compile Include="Controls\Title.cs" />
     <Compile Include="Forms\BasePage.cs" />
     <Compile Include="Forms\Header.cs" />
     <Compile Include="Objects\Browser.cs" />

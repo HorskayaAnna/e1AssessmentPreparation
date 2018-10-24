@@ -14,6 +14,8 @@ namespace Onliner.Test.Automation.Framework.Web.Objects
             MicrosoftEdge
         }
 
+       // public Browser
+
         public static IWebDriver GetDriver(Browsers type)
         {
             IWebDriver driver = null;

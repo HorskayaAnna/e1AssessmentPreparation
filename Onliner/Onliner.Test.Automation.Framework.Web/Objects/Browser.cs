@@ -1,7 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Edge;
-using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 
@@ -11,10 +8,9 @@ namespace Onliner.Test.Automation.Framework.Web.Objects
     {
         public static Browser instance;
         public static IWebDriver _driver;
-        public static CreateBrowser.Browsers currentBrowser;
+        public static IWebDriver Driver => _driver;
 
-
-        Browser()
+        private Browser()
         {
             _driver = CreateBrowser.GetDriver(CreateBrowser.Browsers.Chrome);
         }

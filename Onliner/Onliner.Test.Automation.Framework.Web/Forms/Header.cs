@@ -7,10 +7,21 @@ namespace Onliner.Test.Automation.Framework.Web.Forms
     public class Header
     {
         private TextBox searchLine = new TextBox(By.XPath("//input[@class='fast-search__input']"));
-
-        public void SendText()
+        private ElementsList list = new ElementsList(By.XPath("//div[@class='product__offers__wrapper']"));
+        private Title title = new Title(By.XPath("//h1[@class='catalog-masthead__title']"));
+        public void SendText(string paramName)
         {
-            searchLine.SendKeys("iphone");
+            searchLine.SendKeys(paramName);
+        }
+
+        public void ChoseElement(string paramName)
+        {
+            list.ClickElement(paramName);
+        }
+
+        public string GetTitle()
+        {
+           return title.Text;
         }
     }
 }

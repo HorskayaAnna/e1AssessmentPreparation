@@ -11,8 +11,8 @@ namespace Onliner.Test.Automation.Framework.Web.Tests
         [SetUp]
         public void InitTest()
         {
-            browser = Browser.instance;
-            Browser.Navigate("www.onliner.by");
+            browser = Browser.Instance;
+            Browser.Navigate("https://www.onliner.by/");
         }
 
         [TearDown]
