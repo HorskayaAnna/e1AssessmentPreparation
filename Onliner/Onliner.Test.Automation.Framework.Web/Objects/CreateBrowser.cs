@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
+using System;
 
 namespace Onliner.Test.Automation.Framework.Web.Objects
 {
@@ -13,8 +14,6 @@ namespace Onliner.Test.Automation.Framework.Web.Objects
             Firefox,
             MicrosoftEdge
         }
-
-       // public Browser
 
         public static IWebDriver GetDriver(Browsers type)
         {

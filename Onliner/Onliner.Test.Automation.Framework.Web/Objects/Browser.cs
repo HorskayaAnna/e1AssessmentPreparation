@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 
@@ -9,10 +10,20 @@ namespace Onliner.Test.Automation.Framework.Web.Objects
         public static Browser instance;
         public static IWebDriver _driver;
         public static IWebDriver Driver => _driver;
+        public WebDriverWait Wait => new WebDriverWait(_driver, TimeSpan.FromSeconds(TimeoutForElement));
+        public static int ImplWait;
 
         private Browser()
         {
-            _driver = CreateBrowser.GetDriver(CreateBrowser.Browsers.Chrome);
+            ImplWait = Convert.ToInt32(ConfigurationManager.AppSettings["ImplicitWait"]);
+            _driver = CreateBrowser.GetDriver(BrowserNameToEnum());
+        }
+
+        public CreateBrowser.Browsers BrowserNameToEnum()
+        {
+            CreateBrowser.Browsers browserName;
+            Enum.TryParse(ConfigurationManager.AppSettings["Browser"], out browserName);
+            return browserName;
         }
 
         public static Browser Instance => instance ?? (instance = new Browser());
@@ -36,20 +47,6 @@ namespace Onliner.Test.Automation.Framework.Web.Objects
 
             _driver.Quit();
             _driver = null;
-        }
-
-        public IWebElement FindElement(By locator)
-        {
-
-            return _driver.FindElement(locator);
-
-        }
-
-        public IEnumerable<IWebElement> FindElements(By locator)
-        {
-
-            return _driver.FindElements(locator);
-
         }
     }
 
