@@ -15,7 +15,7 @@ namespace Onliner.Test.Automation.Framework.Web.Controls
         {
             get
             {
-                return  Browser._driver.FindElements(locator).ToList() ;
+                return Browser.Driver.FindElements(locator).ToList();
             }
         }
 
@@ -31,7 +31,7 @@ namespace Onliner.Test.Automation.Framework.Web.Controls
 
         public void ClickElement(string elementName)
         {
-            IWebElement element = Elements.FirstOrDefault(t => (t.Text) == (elementName));          
+            IWebElement element = Elements.FirstOrDefault(t => (t.Text) == (elementName));
             element.Click();
         }
     }

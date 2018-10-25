@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System;
 
 namespace Onliner.Test.Automation.Framework.Web.Controls
 {
@@ -10,6 +11,19 @@ namespace Onliner.Test.Automation.Framework.Web.Controls
 
         public Button(By locator, string name) : base(locator, name)
         {
+        }
+
+        public bool IsClickable()
+        {
+            try
+            {
+                Wait.Until(ExpectedConditions.ElementToBeClickable(Locator));
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }
