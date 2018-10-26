@@ -54,10 +54,13 @@
     <Compile Include="Controls\BaseElement.cs" />
     <Compile Include="Controls\Button.cs" />
     <Compile Include="Controls\ElementList.cs" />
-    <Compile Include="Controls\TextBox.cs" />
-    <Compile Include="Controls\Title.cs" />
+    <Compile Include="Controls\Lable.cs" />
+    <Compile Include="Controls\WebElementExtention.cs" />
     <Compile Include="Forms\BasePage.cs" />
     <Compile Include="Forms\Header.cs" />
+    <Compile Include="Forms\LoginForm.cs" />
+    <Compile Include="Controls\TextBox.cs" />
+    <Compile Include="Forms\PhonePage.cs" />
     <Compile Include="Objects\Browser.cs" />
     <Compile Include="Objects\CreateBrowser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

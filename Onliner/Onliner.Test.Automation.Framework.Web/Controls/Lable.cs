@@ -2,9 +2,9 @@
 
 namespace Onliner.Test.Automation.Framework.Web.Controls
 {
-    public class Title : BaseElement
+    public class Lable : BaseElement
     {
-        public Title(By locator) : base(locator)
+        public Lable(By locator) : base(locator)
         {
         }
     }

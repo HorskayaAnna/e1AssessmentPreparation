@@ -54,16 +54,20 @@
   <ItemGroup>
     <Compile Include="BaseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Onliner\Onliner.Test.Automation.Framework.Web.csproj">
-      <Project>{e3039c0b-86ae-4bca-9f4e-0c3fe61234cc}</Project>
-      <Name>Onliner.Test.Automation.Framework.Web</Name>
-    </ProjectReference>
+    <Compile Include="OnlinerSearchTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Onliner.Test.Automation.Framework.Web.BO\Onliner.Test.Automation.Framework.Web.BO.csproj">
+      <Project>{78b3c7c5-3b33-48e0-9cc4-ed240a80e34d}</Project>
+      <Name>Onliner.Test.Automation.Framework.Web.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Onliner\Onliner.csproj">
+      <Project>{e3039c0b-86ae-4bca-9f4e-0c3fe61234cc}</Project>
+      <Name>Onliner</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

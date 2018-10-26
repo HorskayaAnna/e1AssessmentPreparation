@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,10 @@ namespace Onliner.Controls
 {
     class WebElementExtention
     {
+        public void JsClick()
+        {
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)Browser._driver;
+            executor.ExecuteScript("arguments[0].click();", this.Element);
+        }
     }
 }

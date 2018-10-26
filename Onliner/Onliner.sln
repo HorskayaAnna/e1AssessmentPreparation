@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onliner.Test.Automation.Framework.Web", "Onliner\Onliner.Test.Automation.Framework.Web.csproj", "{E3039C0B-86AE-4BCA-9F4E-0C3FE61234CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onliner", "Onliner\Onliner.csproj", "{E3039C0B-86AE-4BCA-9F4E-0C3FE61234CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onliner.Test.Automation.Framework.Web.Tests", "Onliner.Test.Automation.Framework.Web.Tests\Onliner.Test.Automation.Framework.Web.Tests.csproj", "{3EBA9042-1583-49E3-B506-AD13E27B19BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onliner.Test.Automation.Framework.Web.BO", "Onliner.Test.Automation.Framework.Web.BO\Onliner.Test.Automation.Framework.Web.BO.csproj", "{78B3C7C5-3B33-48E0-9CC4-ED240A80E34D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3EBA9042-1583-49E3-B506-AD13E27B19BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EBA9042-1583-49E3-B506-AD13E27B19BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EBA9042-1583-49E3-B506-AD13E27B19BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78B3C7C5-3B33-48E0-9CC4-ED240A80E34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B3C7C5-3B33-48E0-9CC4-ED240A80E34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B3C7C5-3B33-48E0-9CC4-ED240A80E34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B3C7C5-3B33-48E0-9CC4-ED240A80E34D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

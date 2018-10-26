@@ -10,7 +10,7 @@ namespace Onliner.Test.Automation.Framework.Web.Objects
         public static Browser instance;
         public static IWebDriver _driver;
         public static IWebDriver Driver => _driver;
-        public WebDriverWait Wait => new WebDriverWait(_driver, TimeSpan.FromSeconds(TimeoutForElement));
+        //public WebDriverWait Wait => new WebDriverWait(_driver, TimeSpan.FromSeconds(TimeoutForElement));
         public static int ImplWait;
 
         private Browser()

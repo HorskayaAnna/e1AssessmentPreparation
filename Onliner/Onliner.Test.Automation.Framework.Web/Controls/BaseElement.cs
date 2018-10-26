@@ -32,17 +32,12 @@ namespace Onliner.Test.Automation.Framework.Web.Controls
         }
         public string Text => Element.Text;
 
-        public void Submit()
-        {
-            Element.Submit();
-        }
-
         public void WaitForIsVisible()
         {
             Wait.Until(ExpectedConditions.ElementExists(Locator));
         }
 
-        public bool IsVisible()
+        public bool IsVisible() 
         {
             try
             {
@@ -70,13 +65,6 @@ namespace Onliner.Test.Automation.Framework.Web.Controls
         {
             Element.Click();
         }
-
-        public void JsClick()
-        {
-            IJavaScriptExecutor executor = (IJavaScriptExecutor)Browser._driver;
-            executor.ExecuteScript("arguments[0].click();", this.Element);
-        }
-
     }
 
 }

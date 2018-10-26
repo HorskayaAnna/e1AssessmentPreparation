@@ -7,7 +7,7 @@ namespace Onliner.Test.Automation.Framework.Web.Forms
     {
         public By Locator { get; private set; }
 
-        protected BaseForm(By Locator, Browser browser)
+        protected BaseForm(By Locator)
         {
             this.Locator = Locator;
         }

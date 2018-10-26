@@ -6,12 +6,10 @@ namespace Onliner.Test.Automation.Framework.Web.Tests
 {
     public class BaseTest
     {
-        protected static Browser browser;
 
         [SetUp]
         public void InitTest()
         {
-            browser = Browser.Instance;
             Browser.Navigate("https://www.onliner.by/");
         }
 

@@ -1,27 +1,29 @@
 ﻿using Onliner.Test.Automation.Framework.Web.Controls;
 using OpenQA.Selenium;
+using System.Text;
 
 namespace Onliner.Test.Automation.Framework.Web.Forms
 {
-    class LoginForm
+    public class LoginForm
     {
         public TextBox login = new TextBox(By.CssSelector("input[data - field = login]"));
         public TextBox password = new TextBox(By.CssSelector("input[type=password]"));
         public Button submit = new Button(By.XPath("//button[@type='submit']"));
 
-        public void inputData(string loginData, string passwordData)
+        public void Update(string loginData, string passwordData)
         {
             login.SendKeys(loginData);
             password.SendKeys(passwordData);
+            //return this;
         }
 
-        public void clickSubmit()
+        public void Submit()
         {
             submit.Click();
         }
 
-        public bool isSubmitClickable() => submit.IsClickable();
-        public bool isLoginTextBoxVisible() => login.IsVisible();
-        public bool isPassTextBoxVisible() => password.IsVisible();
+        public bool IsSubmitClickable() => submit.IsClickable();
+        public bool IsLoginTextBoxVisible() => login.IsVisible();
+        public bool IsPassTextBoxVisible() => password.IsVisible();
     }
 }
