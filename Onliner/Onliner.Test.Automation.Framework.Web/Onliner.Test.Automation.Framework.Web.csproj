@@ -60,7 +60,7 @@
     <Compile Include="Forms\Header.cs" />
     <Compile Include="Forms\LoginForm.cs" />
     <Compile Include="Controls\TextBox.cs" />
-    <Compile Include="Forms\PhonePage.cs" />
+    <Compile Include="Forms\ChosenPhonePage.cs" />
     <Compile Include="Objects\Browser.cs" />
     <Compile Include="Objects\CreateBrowser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

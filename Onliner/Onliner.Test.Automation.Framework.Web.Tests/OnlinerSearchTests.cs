@@ -17,9 +17,8 @@ namespace Onliner.Test.Automation.Framework.Web.Tests
         {
             string stringToSearch = "Iphone";
             string expectedTitle = "Смартфон Apple iPhone SE 32GB Space Gray";
-            OnlinerBO.Page<MainPage>().Header.SendText(stringToSearch);
-            OnlinerBO.Page<MainPage>().Header.ChoseElement(expectedTitle);
-            Assert.AreEqual(OnlinerBO.Page<MainPage>().Phone.Title, expectedTitle);
+            OnlinerBO.Page<MainPage>().Header.SendText(stringToSearch).ChoseElement(expectedTitle);
+            Assert.AreEqual(OnlinerBO.Page<MainPage>().ChosenPhone.Title, expectedTitle);
         }
     }
 }

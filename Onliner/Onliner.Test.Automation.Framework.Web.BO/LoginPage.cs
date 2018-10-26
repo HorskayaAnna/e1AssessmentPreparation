@@ -8,17 +8,16 @@ namespace Onliner.Test.Automation.Framework.Web.BO
 {
     public class LoginPage
     {
-        public LoginForm Form { get; }
+        public LoginForm LogForm { get; }
 
         public LoginPage()
         {
-            Form = new LoginForm();
+            LogForm = new LoginForm();
         }
 
         public void LoginIn(string login, string password)
         {
-            Form.Update(login, password);
-            Form.Submit();
+            LogForm.Update(login, password).Submit();
         }
     }
 }

@@ -10,11 +10,11 @@ namespace Onliner.Test.Automation.Framework.Web.Forms
         public TextBox password = new TextBox(By.CssSelector("input[type=password]"));
         public Button submit = new Button(By.XPath("//button[@type='submit']"));
 
-        public void Update(string loginData, string passwordData)
+        public LoginForm Update(string loginData, string passwordData)
         {
             login.SendKeys(loginData);
             password.SendKeys(passwordData);
-            //return this;
+            return this;
         }
 
         public void Submit()

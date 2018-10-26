@@ -9,10 +9,11 @@ namespace Onliner.Test.Automation.Framework.Web.Forms
         private TextBox searchLine = new TextBox(By.XPath("//input[@class='fast-search__input']"));
         private ElementsList list = new ElementsList(By.XPath("//div[@class='product__offers__wrapper']"));
 
-        public void SendText(string paramName)
+        public Header SendText(string paramName)
         {
             searchLine.IsVisible();
             searchLine.SendKeys(paramName);
+            return this;
         }
 
         public void ChoseElement(string paramName)

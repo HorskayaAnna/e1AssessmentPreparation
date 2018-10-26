@@ -11,12 +11,12 @@ namespace Onliner.Test.Automation.Framework.Web.BO
     {
         public Header Header { get; }
         //public Header Header { get; set; }
-        public PhonePage Phone { get; }
+        public ChosenPhonePage ChosenPhone { get; }
 
         public MainPage()
         {
             Header = new Header();
-            Phone = new PhonePage();
+            ChosenPhone = new ChosenPhonePage();
         }
 
     }
