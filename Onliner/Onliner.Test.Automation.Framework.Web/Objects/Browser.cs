@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
 
 namespace Onliner.Test.Automation.Framework.Web.Objects
 {
@@ -19,11 +17,14 @@ namespace Onliner.Test.Automation.Framework.Web.Objects
             _driver = CreateBrowser.GetDriver(BrowserNameToEnum());
         }
 
-        public CreateBrowser.Browsers BrowserNameToEnum()
+        public CreateBrowser.Browsers BrowserNameToEnum
         {
-            CreateBrowser.Browsers browserName;
-            Enum.TryParse(ConfigurationManager.AppSettings["Browser"], out browserName);
-            return browserName;
+            get
+            {
+                CreateBrowser.Browsers browserName;
+                Enum.TryParse(ConfigurationManager.AppSettings["Browser"], out browserName);
+                return browserName;
+            }
         }
 
         public static Browser Instance => instance ?? (instance = new Browser());

@@ -22,8 +22,29 @@ namespace Onliner.Test.Automation.Framework.Web.Forms
             submit.Click();
         }
 
-        public bool IsSubmitClickable() => submit.IsClickable();
-        public bool IsLoginTextBoxVisible() => login.IsVisible();
-        public bool IsPassTextBoxVisible() => password.IsVisible();
+        public bool IsSubmitClickable
+        {
+            get
+            {
+                return submit.IsClickable();
+            }
+        }
+
+        public bool IsLoginTextBoxVisible
+        {
+            get
+            {
+                return login.IsVisible();
+            }
+        }
+
+        public bool IsPassTextBoxVisible
+        {
+            get
+            {
+                return password.IsVisible();
+            }
+        }
+
     }
 }

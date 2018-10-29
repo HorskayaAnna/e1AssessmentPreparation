@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginPage.cs" />
-    <Compile Include="MainPage.cs" />
-    <Compile Include="OnlinerBO.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\MainPage.cs" />
+    <Compile Include="Onliner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

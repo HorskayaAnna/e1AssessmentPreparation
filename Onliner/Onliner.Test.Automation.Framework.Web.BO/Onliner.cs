@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Onliner.Test.Automation.Framework.Web.BO
 {
-    public class OnlinerBO
+    public class Onliner
     {
         public static T Page<T>() 
         {

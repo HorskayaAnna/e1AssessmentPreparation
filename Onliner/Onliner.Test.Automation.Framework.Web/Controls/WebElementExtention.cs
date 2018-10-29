@@ -1,18 +1,13 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Onliner.Controls
 {
-    class WebElementExtention
+    static class WebElementExtention
     {
-        public void JsClick()
+        public static void JsClick(this IWebElement element)
         {
             IJavaScriptExecutor executor = (IJavaScriptExecutor)Browser._driver;
-            executor.ExecuteScript("arguments[0].click();", this.Element);
+            executor.ExecuteScript("arguments[0].click();", Element);
         }
     }
 }
