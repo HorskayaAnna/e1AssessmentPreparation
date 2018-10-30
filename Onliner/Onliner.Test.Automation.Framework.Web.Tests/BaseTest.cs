@@ -10,7 +10,7 @@ namespace Onliner.Test.Automation.Framework.Web.Tests
         [SetUp]
         public void InitTest()
         {
-            Browser.Navigate("https://www.onliner.by/");
+            Browser.Navigate(ConfigurationManager.AppSettings["StartUrl"]);
         }
 
         [TearDown]

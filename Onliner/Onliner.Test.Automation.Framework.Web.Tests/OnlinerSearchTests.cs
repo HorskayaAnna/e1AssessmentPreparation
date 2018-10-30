@@ -7,7 +7,7 @@ namespace Onliner.Test.Automation.Framework.Web.Tests
     [TestFixture]
     public class OnlinerSearchTests : BaseTest
     {
-        [SetUp]
+        [OneTimeSetUp]
         public void LoginIn()
         {
             OnlinerBO.Page<LoginPage>().LoginIn(ConfigurationManager.AppSettings["Email"], ConfigurationManager.AppSettings["Password"]);
