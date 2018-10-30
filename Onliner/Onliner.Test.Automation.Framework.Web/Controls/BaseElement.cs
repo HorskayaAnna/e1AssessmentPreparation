@@ -2,8 +2,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Drawing;
-
 
 namespace Onliner.Test.Automation.Framework.Web.Controls
 {
@@ -37,16 +35,19 @@ namespace Onliner.Test.Automation.Framework.Web.Controls
             Wait.Until(ExpectedConditions.ElementExists(Locator));
         }
 
-        public bool IsVisible() 
+        public bool IsVisible
         {
-            try
+            get
             {
-                Wait.Until(ExpectedConditions.ElementIsVisible(Locator));
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                try
+                {
+                    Wait.Until(ExpectedConditions.ElementIsVisible(Locator));
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 

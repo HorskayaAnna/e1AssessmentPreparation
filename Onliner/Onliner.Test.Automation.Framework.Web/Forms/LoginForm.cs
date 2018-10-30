@@ -4,11 +4,15 @@ using System.Text;
 
 namespace Onliner.Test.Automation.Framework.Web.Forms
 {
-    public class LoginForm
+    public class LoginForm : BasePage
     {
         public TextBox login = new TextBox(By.CssSelector("input[data - field = login]"));
         public TextBox password = new TextBox(By.CssSelector("input[type=password]"));
         public Button submit = new Button(By.XPath("//button[@type='submit']"));
+
+        public LoginForm(By submit) : base(submit)
+        {
+        }
 
         public LoginForm Update(string loginData, string passwordData)
         {
@@ -34,7 +38,7 @@ namespace Onliner.Test.Automation.Framework.Web.Forms
         {
             get
             {
-                return login.IsVisible();
+                return login.IsVisible;
             }
         }
 
@@ -42,7 +46,7 @@ namespace Onliner.Test.Automation.Framework.Web.Forms
         {
             get
             {
-                return password.IsVisible();
+                return password.IsVisible;
             }
         }
 

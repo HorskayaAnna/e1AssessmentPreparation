@@ -3,11 +3,11 @@ using OpenQA.Selenium;
 
 namespace Onliner.Test.Automation.Framework.Web.Forms
 {
-    public abstract class BaseForm
+    public abstract class BasePage
     {
         public By Locator { get; private set; }
 
-        protected BaseForm(By Locator)
+        protected BasePage(By Locator)
         {
             this.Locator = Locator;
         }

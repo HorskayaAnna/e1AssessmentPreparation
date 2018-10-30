@@ -9,28 +9,33 @@ namespace Onliner.Test.Automation.Framework.Web.BO.Pages
 {
     public class MainPage
     {
-        public Header header;
-        public ChosenPhonePage chosenPhone;
-        private Header Header()
+        public Header Header
         {
-            get
+            set
             {
                 if (Header == null)
                 {
-                   header  = new Header();
+                    Header = new Header();
                 }
-                return header;
+            }
+            get
+            {
+                return Header;
             }
         }
-        private ChosenPhonePage ChosenPhonePage()
+
+        public ChosenPhonePage ChosenPhonePage
         {
-            get
+            set
             {
                 if (ChosenPhonePage == null)
                 {
-                    chosenPhone = new ChosenPhonePage();
+                    ChosenPhonePage = new ChosenPhonePage();
                 }
-                return chosenPhone;
+            }
+            get
+            {
+                return ChosenPhonePage;
             }
         }
     }

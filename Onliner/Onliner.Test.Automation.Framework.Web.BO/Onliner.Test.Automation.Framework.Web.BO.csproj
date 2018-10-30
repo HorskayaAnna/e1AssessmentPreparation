@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\MainPage.cs" />
-    <Compile Include="Onliner.cs" />
+    <Compile Include="OnlinerBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

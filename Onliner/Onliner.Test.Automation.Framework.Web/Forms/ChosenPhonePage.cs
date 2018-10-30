@@ -6,6 +6,11 @@ namespace Onliner.Test.Automation.Framework.Web.Forms
     public class ChosenPhonePage : BasePage
     {
         private Lable title = new Lable(By.XPath("//h1[@class='catalog-masthead__title']"));
+
+        public ChosenPhonePage(By title) : base(title)
+        {
+        }
+
         public string Title => title.Text;
     }
 }

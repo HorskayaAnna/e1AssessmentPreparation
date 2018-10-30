@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Onliner.Test.Automation.Framework.Web.BO.Pages;
 using Onliner.Test.Automation.Framework.Web.BO;
 
 namespace Onliner.Test.Automation.Framework.Web.Tests
@@ -9,7 +10,7 @@ namespace Onliner.Test.Automation.Framework.Web.Tests
         [SetUp]
         public void LoginIn()
         {
-            OnlinerBO.Page<LoginPage>().LoginIn("horskaya.anna@gmail.com", "123qweasdzxc");
+            OnlinerBO.Page<LoginPage>().LoginIn(ConfigurationManager.AppSettings["Email"], ConfigurationManager.AppSettings["Password"]);
         }
 
         [Test]
@@ -18,7 +19,7 @@ namespace Onliner.Test.Automation.Framework.Web.Tests
             string stringToSearch = "Iphone";
             string expectedTitle = "Смартфон Apple iPhone SE 32GB Space Gray";
             OnlinerBO.Page<MainPage>().Header.SendText(stringToSearch).ChoseElement(expectedTitle);
-            Assert.AreEqual(OnlinerBO.Page<MainPage>().ChosenPhone.Title, expectedTitle);
+            Assert.AreEqual(OnlinerBO.Page<MainPage>().ChosenPhonePage.Title, expectedTitle);
         }
     }
 }

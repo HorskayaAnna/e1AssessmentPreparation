@@ -8,13 +8,12 @@ namespace Onliner.Test.Automation.Framework.Web.Objects
         public static Browser instance;
         public static IWebDriver _driver;
         public static IWebDriver Driver => _driver;
-        //public WebDriverWait Wait => new WebDriverWait(_driver, TimeSpan.FromSeconds(TimeoutForElement));
         public static int ImplWait;
 
         private Browser()
         {
             ImplWait = Convert.ToInt32(ConfigurationManager.AppSettings["ImplicitWait"]);
-            _driver = CreateBrowser.GetDriver(BrowserNameToEnum());
+            _driver = CreateBrowser.GetDriver(BrowserNameToEnum);
         }
 
         public CreateBrowser.Browsers BrowserNameToEnum
